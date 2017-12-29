@@ -10,7 +10,7 @@ In previous blog, we have learned the fundamentals of react including React conc
 7. Controlled Component
 8. Lesson Summary
 ## Content
-###1. State Intro
+### 1. State Intro
 In the blog, we will introduce three new concepts:
   1. Props \- Allow you to pass data into your components
   2. Functional Components \- An alternative way to create components
@@ -19,7 +19,7 @@ In the blog, we will introduce three new concepts:
 By introducing those concepts, we are going to build an react app that will list your contacts, search the contact you want, and add new contacts.
 Finished project can be found here.
 https://github.com/BridgeNB/React-Learning-Note-2.git
-###2. Pass Data with Props
+### 2. Pass Data with Props
 Given an example
 ```jsx
 /* Use props we can access the value from inside of component*/
@@ -91,7 +91,7 @@ render() {
   return <div>{this.props.text}</div>
 }
 ```
-###3. Functional Components
+### 3. Functional Components
 stateless functional componenets
 ```jsx
 /* if the componenet only has render method, we can build a stateless functional components */
@@ -117,7 +117,7 @@ function ListContacts (props) {
 }
 /*Above code is equivalent to previous code snippet*/
 ```
-####Recap
+#### Recap
 ```jsx
 class Book extends React.Component {
   render() {
@@ -135,8 +135,8 @@ const Book = (props) => (
 );
 /* They are equivalent. The second called stateless functional component */
 ```
-###4. Add State to A component
-####Intro
+### 4. Add State to A component
+#### Intro
 Although props refer to attributes from parent component, it only represents read-only data that are immutatble. A component state, on the other hand, represents mutable data taht ultimately affects the finally render effection.
 Given an example:
 ```jsx
@@ -160,9 +160,9 @@ class User extends React.Component {
   }
 }
 ```
-####Recap:
+#### Recap:
 React will know and make the necessary updates by having a component manage its own state. So we just need to think about updating state without concerned others, such as render performance. It is a key advantage of React.
-###5. Update state with setState
+### 5. Update state with setState
 React cannot allow to change state directly because it will cause confusion. React use <strong>setState</strong> to change state. There are two ways to use setState and examples are given below:
 ```jsx
 /* 1. Use setState directly as a funtion. Use this case when you want to udpate state based on previous state */
@@ -174,9 +174,9 @@ this.setState({
   username: 'Bridge'
 })
 ```
-####Recap
+#### Recap
 Use this.setState() to merge state updates or to update a state based on previous state.
-###6. PropTypes
+### 6. PropTypes
 Using proptype can reduce amount of time on debugging. It will specify the specific types of each prop we are going to pass and type being, such as string, array, object, function, things like that, and it will also say those parameters required or not.
 Given an example
 ```jsx
@@ -187,9 +187,9 @@ ListContacts.prototype = {
   onDeleteContact: PropTypes.func.isRequired
 }
 ```
-####Recap
+#### Recap
 Proptypes are great way to validate intended data types in React app. It can check bot datatypes and requirments to reduce debugging time.
-###7. Controlled Component
+### 7. Controlled Component
 Controlled Components which render a form, but the source of truth for that form state lives inside of the component state rather than inside of DOM.
 Given an example:
 ```jsx
@@ -222,5 +222,3 @@ More specific example can be viewed in ListContacts.js file, we used a search ba
 1. Instant input validation
 2. Conditionally disable / enable form buttoms
 3. enforce input formats
-## Conclusion
-## Code Reference
